@@ -12,7 +12,6 @@ const game = {
 
 const hands = [...document.querySelectorAll('.select img')];
 
-// Pierwsza funkcja
 function handSelection() {
     game.playerHand = this.dataset.option
     console.log(game.playerHand);
@@ -20,10 +19,6 @@ function handSelection() {
     this.style.boxShadow = '0 0 0 4px yellow'
 }
 
-// const handSelection = (e) => {
-//     console.log(e.target);
-//     console.log(e.currentTarget);
-// }
 
 function aiChoice () {
 
@@ -47,7 +42,6 @@ else if(
     console.log("przegrałeś")
 }
 }
-//Publikacja wyniku
 
 function publishResult(player, ai, result) {
     document.querySelector('[data-summary="your-choice"]').textContent = player; 
@@ -77,7 +71,6 @@ function endGame () {
     document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = '';
     game.playerHand = "";
 }
-// funkcja sterująca
 
 function startGame () {
     if(!game.playerHand) {
